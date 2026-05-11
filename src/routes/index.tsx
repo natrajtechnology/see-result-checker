@@ -1,26 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SEEResultChecker } from "@/components/SEEResultChecker";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "SEE Result 2082/83 Online Check | Newsbureau Nepal" },
+      {
+        name: "description",
+        content:
+          "Check SEE Result 2082/83 online with symbol number. Get instant SEE result notification from Newsbureau Nepal — Nepal's trusted news portal.",
+      },
+      { property: "og:title", content: "SEE Result 2082/83 Online | Newsbureau Nepal" },
+      {
+        property: "og:description",
+        content:
+          "Check your SEE 2082/83 result instantly. Enter your symbol number and get notified by Newsbureau Nepal.",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "canonical", href: "https://enewsbureau.com/see-result-2082-83" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-[image:var(--gradient-hero)]">
+      <SiteHeader />
+      <main>
+        <SEEResultChecker />
+        <Footer />
+      </main>
+      <Toaster richColors position="top-center" />
     </div>
   );
 }
 
-function Index() {
-  return <PlaceholderIndex />;
+function Footer() {
+  return (
+    <footer className="border-t border-border/60 bg-card/40">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-muted-foreground md:flex-row">
+        <p>© {new Date().getFullYear()} Newsbureau Nepal. All rights reserved.</p>
+        <p>तराई–मधेसको नं.१ डिजिटल समाचार पोर्टल</p>
+      </div>
+    </footer>
+  );
 }

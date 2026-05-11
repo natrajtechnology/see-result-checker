@@ -64,22 +64,22 @@ export function SEEResultChecker() {
   };
 
   return (
-    <section id="check" className="relative mx-auto max-w-6xl px-4 py-12 md:py-20">
-      <div className="grid gap-10 md:grid-cols-2 md:items-center">
+    <section id="check" className="relative mx-auto max-w-6xl px-4 py-8 sm:py-12 md:py-20">
+      <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-10">
         {/* Left: Heading + illustration */}
         <div className="order-2 md:order-1">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground shadow-sm">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-[11px] font-medium text-muted-foreground shadow-sm sm:px-4 sm:text-xs">
             <Sparkles className="h-3.5 w-3.5 text-[color:var(--brand-red)]" />
             Powered by Newsbureau Nepal
           </div>
-          <h1 className="mt-4 text-4xl font-black leading-[1.05] tracking-tight text-foreground md:text-5xl">
+          <h1 className="mt-4 text-3xl font-black leading-[1.05] tracking-tight text-foreground sm:text-4xl md:text-5xl">
             CHECK <span className="text-[color:var(--brand-red)]">SEE RESULT</span>
             <br />
             <span className="bg-gradient-to-r from-[color:var(--brand-teal)] to-[color:var(--primary-glow)] bg-clip-text text-transparent">
               2082 / 83
             </span>
           </h1>
-          <p className="mt-4 max-w-md text-base text-muted-foreground">
+          <p className="mt-3 max-w-md text-sm text-muted-foreground sm:mt-4 sm:text-base">
             Get your Secondary Education Examination result the moment it is
             published. Enter your symbol number to register for instant
             notification.
@@ -90,6 +90,7 @@ export function SEEResultChecker() {
             alt="Student celebrating SEE result"
             width={500}
             height={500}
+            loading="lazy"
             className="mt-6 hidden h-auto w-full max-w-md md:block"
           />
         </div>
@@ -100,7 +101,7 @@ export function SEEResultChecker() {
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-[color:var(--brand-teal)]/30 to-[color:var(--brand-red)]/30 blur-2xl" />
             <form
               onSubmit={onSubmit}
-              className="relative rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] md:p-8"
+              className="relative rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] sm:rounded-3xl sm:p-6 md:p-8"
             >
               <div className="mb-5 flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[color:var(--brand-teal)] to-[color:var(--primary-glow)] text-primary-foreground shadow-md">

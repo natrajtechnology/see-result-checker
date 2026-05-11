@@ -44,7 +44,7 @@ function Index() {
 function Footer() {
   return (
     <footer className="border-t border-border/60 bg-card/40">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-muted-foreground md:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-6 text-center text-xs text-muted-foreground sm:text-sm md:flex-row md:gap-3 md:text-left">
         <p>© {new Date().getFullYear()} Newsbureau Nepal. All rights reserved.</p>
         <p>तराई–मधेसको नं.१ डिजिटल समाचार पोर्टल</p>
         <p>

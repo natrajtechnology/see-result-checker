@@ -101,7 +101,7 @@ export function SEEResultChecker() {
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-[color:var(--brand-teal)]/30 to-[color:var(--brand-red)]/30 blur-2xl" />
             <form
               onSubmit={onSubmit}
-              className="relative rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] md:p-8"
+              className="relative rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)] sm:rounded-3xl sm:p-6 md:p-8"
             >
               <div className="mb-5 flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[color:var(--brand-teal)] to-[color:var(--primary-glow)] text-primary-foreground shadow-md">
